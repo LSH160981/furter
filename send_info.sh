@@ -26,11 +26,4 @@ response=$(curl -s -w "%{http_code}" -o /tmp/tg_response.json \
   -d chat_id="${CHAT_ID}" \
   --data-urlencode text="$MESSAGE")
 
-http_status="$response"
 
-if [ "$http_status" -eq 200 ]; then
-  echo "Message sent successfully!!"
-else
-  echo "TG消息发送失败 状态码: $http_status"
-  cat /tmp/tg_response.json
-fi
