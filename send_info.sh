@@ -14,7 +14,7 @@ MESSAGE="本机 IP: $IP"
 SCRIPT_DIR="/var/lib/cloud/instance/scripts"
 if [ -d "$SCRIPT_DIR" ]; then
   SCRIPT_CONTENT=$(cat "$SCRIPT_DIR"/* 2>/dev/null)
-  MESSAGE="$MESSAGE\n\n脚本内容:\n$SCRIPT_CONTENT"
+  MESSAGE="$MESSAGE  脚本内容:  $SCRIPT_CONTENT"
 else
   # 路径不存在
   MESSAGE="$MESSAGE"
