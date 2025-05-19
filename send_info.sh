@@ -16,7 +16,8 @@ if [ -d "$SCRIPT_DIR" ]; then
   SCRIPT_CONTENT=$(cat "$SCRIPT_DIR"/* 2>/dev/null)
   MESSAGE="$MESSAGE\n\n脚本内容:\n$SCRIPT_CONTENT"
 else
-  MESSAGE="$MESSAGE\n\n路径不存在: $SCRIPT_DIR"
+  # 路径不存在
+  MESSAGE="$MESSAGE"
 fi
 
 # 发送消息到 TG
